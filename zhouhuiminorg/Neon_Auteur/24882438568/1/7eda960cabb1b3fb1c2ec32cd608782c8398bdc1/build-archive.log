@@ -1,0 +1,57 @@
+Command line invocation:
+    /Applications/Xcode_26.3.app/Contents/Developer/usr/bin/xcodebuild archive -workspace ./NeonAuteur.xcworkspace -scheme NeonAuteur -configuration Release -destination generic/platform=iOS -archivePath /Users/runner/work/Neon_Auteur/Neon_Auteur/build.xcarchive
+
+2026-04-24 09:28:33.474 xcodebuild[59674:144740] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (4 targets)
+    Target 'NeonAuteur' in project 'NeonAuteur'
+        ➜ Implicit dependency on target 'Pods-NeonAuteur' in project 'Pods' via file 'Pods_NeonAuteur.framework' in build phase 'Link Binary'
+    Target 'Pods-NeonAuteur' in project 'Pods'
+        ➜ Explicit dependency on target 'UMCommon' in project 'Pods'
+        ➜ Explicit dependency on target 'UMDevice' in project 'Pods'
+    Target 'UMCommon' in project 'Pods'
+        ➜ Explicit dependency on target 'UMDevice' in project 'Pods'
+    Target 'UMDevice' in project 'Pods' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode_26.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/runner/work/Neon_Auteur/Neon_Auteur/NeonAuteur/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode_26.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode_26.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -x objective-c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -V
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 514d181d4e8ae92f126edcddfda24bac
+Build description path: /Users/runner/Library/Developer/Xcode/DerivedData/NeonAuteur-diwceafxzpescyagxuoubwvrkqgq/Build/Intermediates.noindex/ArchiveIntermediates/NeonAuteur/IntermediateBuildFilesPath/XCBuildData/514d181d4e8ae92f126edcddfda24bac.xcbuilddata
+/Users/runner/work/Neon_Auteur/Neon_Auteur/NeonAuteur.xcodeproj: error: Provisioning profile "appstore-6761511359-20260424092814985" has app ID "com.smartremt.unify", which does not match the bundle ID "com.smartremt.unify.NeonAuteur". (in target 'NeonAuteur' from project 'NeonAuteur')
+/Users/runner/work/Neon_Auteur/Neon_Auteur/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'UMDevice' from project 'Pods')
+/Users/runner/work/Neon_Auteur/Neon_Auteur/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'UMCommon' from project 'Pods')
+** ARCHIVE FAILED **
+
+
+The following build commands failed:
+	Archiving workspace NeonAuteur with scheme NeonAuteur
+(1 failure)
